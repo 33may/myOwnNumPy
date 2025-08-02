@@ -9,7 +9,7 @@ int main(){
 
     size_t ndims = tensor.ndims();
 
-    // std::cout << tensor;
+    std::cout << tensor;
     
     std::cout << "The shape of tensor is: " << shp << std::endl;
 
