@@ -1,7 +1,9 @@
 #pragma once
+
 #include <cstddef>
 #include <array>
 #include <vector>
+#include <ostream>
 
 
 namespace myOwnNumPy {
@@ -17,4 +19,7 @@ namespace myOwnNumPy {
 
             std::vector<std::size_t> shape_;
     };
+
+    std::ostream& operator<<(std::ostream& os, const ndarray& tensor);
+
 }

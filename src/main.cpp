@@ -2,6 +2,7 @@
 #include <myOwnNumPy/utils/version.hpp>
 #include <myOwnNumPy/ops/add.hpp>
 #include <myOwnNumPy/ndarray.hpp>
+#include <myOwnNumPy/shape.hpp>
 
 int main(){
 
@@ -21,9 +22,18 @@ int main(){
 
     myOwnNumPy::ndarray mat(shape_input);
 
-    auto shape = mat.shape();
+    std::vector<std::size_t> shape = mat.shape();
 
-    std::cout << "Shape: " << shape[0] << " " << shape[1] << std::endl;
+    // std::cout << "Shape: " << shape[0] << " " << shape[1] << std::endl;
+    // std::cout << mat << std::endl;
 
+    myOwnNumPy::Shape shp = {1, 2, 3};
+
+    size_t ndims = shp.ndims();
+
+    std::cout << ndims << std::endl;
+    
+    std::cout << shp;
+    
     return -1;
 }
