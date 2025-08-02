@@ -14,10 +14,12 @@ int main(){
 
     std::cout << "Addition result " << res << '\n';
 
-    int r = 2;
-    int c = 4;
+    size_t r = 2;
+    size_t c = 4;
 
-    myOwnNumPy::ndarray mat(r, c);
+    std::vector shape_input = {r, c};
+
+    myOwnNumPy::ndarray mat(shape_input);
 
     auto shape = mat.shape();
 
